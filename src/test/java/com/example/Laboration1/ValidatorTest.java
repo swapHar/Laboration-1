@@ -28,7 +28,7 @@ public class ValidatorTest {
 
         boolean isValid = Validator.isPhoneNumberValid(validPhoneNumber);
 
-        Assertions.assertFalse(isValid);
+        Assertions.assertTrue(isValid);
     }
 
     @Test
