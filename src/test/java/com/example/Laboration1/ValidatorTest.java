@@ -64,5 +64,21 @@ public class ValidatorTest {
         Assertions.assertFalse(isValid);
     }
 
+    @Test
+    @DisplayName("isEmailValid method should return true if email format is correct")
+    void validEmail() {
+        String validEmail = "example@example.com";
+        boolean isValid = Validator.isEmailValid(validEmail);
+        Assertions.assertTrue(isValid);
+    }
+
+    @Test
+    @DisplayName("isEmailValid method should return false if '@' sign is missing ")
+    void invalidEmail_NoAtSign() {
+        String validEmail = "exampleexample.com";
+        boolean isValid = Validator.isEmailValid(validEmail);
+        Assertions.assertFalse(isValid);
+    }
+
 
 }
